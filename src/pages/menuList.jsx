@@ -30,7 +30,10 @@ const MenuList = () => {
               </div>
             </div>
 
-            <button className="text-xl font-semibold px-12 py-3 rounded-3xl bg-green-500 text-white mt-10">
+            <button
+              className="text-xl font-semibold px-12 py-3 rounded-3xl bg-green-500 text-white mt-10"
+              onClick={() => navigate("/order/" + menu.id)}
+            >
               Order
             </button>
           </div>
