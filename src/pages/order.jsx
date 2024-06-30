@@ -6,8 +6,11 @@ import ModalOrder from "../component/modal-order";
 const Order = () => {
   const { menu_id } = useParams();
   const [filteredMenu, setFilteredMenu] = useState();
-  const [selectedVariantPrice, setSelectedVariantPrice] = useState();
-  const [count, setCount] = useState();
+  const [selectedVariantPrice, setSelectedVariantPrice] = useState({
+    name: "",
+    price: 0,
+  });
+  const [count, setCount] = useState(0);
   const [isShowModalOrder, setIsShowModalOrder] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
@@ -41,7 +44,10 @@ const Order = () => {
                 id="variant"
                 className="p-4 border rounded-xl border-black relative"
                 onChange={(e) => {
-                  setSelectedVariantPrice(e.target.value);
+                  setSelectedVariantPrice({
+                    name: e.target.selectedOptions[0].text,
+                    price: e.target.value,
+                  });
                 }}
               >
                 {filteredMenu?.variant.map((variant, i) => (
@@ -61,11 +67,24 @@ const Order = () => {
                 onChange={(e) => setCount(e.target.value)}
               />
             </div>
-            <div>Total : Rp. {selectedVariantPrice * count || 0}</div>
+            <div>Total : Rp. {selectedVariantPrice.price * count || 0}</div>
             <div className="w-full mt-10">
               <button
                 type="submit"
-                className="py-4 px-16 border rounded-xl bg-green-500 text-lg font-semibold text-white w-full"
+                className={`py-4 px-16 border rounded-xl text-lg font-semibold text-white w-full ${
+                  selectedVariantPrice.name === "" ||
+                  selectedVariantPrice.price === 0 ||
+                  count === "" ||
+                  count === 0
+                    ? "bg-slate-500"
+                    : "bg-green-500"
+                }`}
+                disabled={
+                  selectedVariantPrice.name === "" ||
+                  selectedVariantPrice.price === 0 ||
+                  count === "" ||
+                  count === 0
+                }
               >
                 Order
               </button>
@@ -73,7 +92,15 @@ const Order = () => {
           </form>
         </div>
       </div>
-      <ModalOrder isShow={isShowModalOrder} setIsShow={(e)=>{setIsShowModalOrder(e)}}/>
+      <ModalOrder
+        variant={selectedVariantPrice.name}
+        price={selectedVariantPrice.price}
+        count={count}
+        isShow={isShowModalOrder}
+        setIsShow={(e) => {
+          setIsShowModalOrder(e);
+        }}
+      />
     </section>
   );
 };

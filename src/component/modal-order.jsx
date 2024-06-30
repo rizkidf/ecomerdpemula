@@ -1,4 +1,4 @@
-const ModalOrder = ({ isShow, setIsShow }) => {
+const ModalOrder = ({ isShow, setIsShow , variant , count , price }) => {
   return (
     <section
       className={`flex justify-center items-center h-[100vh] w-full bg-slate-500 bg-opacity-30 absolute ${
@@ -13,9 +13,9 @@ const ModalOrder = ({ isShow, setIsShow }) => {
             <p>Variant</p>
             <p>Jumlah</p>
             <p>Total</p>
-            <p>Chocolate</p>
-            <p>2</p>
-            <p>Rp. 20.000</p>
+            <p>{variant || ""}</p>
+            <p>{count || ""}</p>
+            <p>{`Rp. ${price}` || ""}</p>
           </div>
         </div>
         <div className="mt-10">
