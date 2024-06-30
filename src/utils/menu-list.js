@@ -2,6 +2,7 @@ export const menuList = [
   {
     id: 1,
     title: "Ice Cream",
+    image:"src/assets/background-with-delicious-ice-cream-with-text-hello-summer.png",
     variant: [
       {
         name: "Strawbery",
@@ -20,6 +21,7 @@ export const menuList = [
   {
     id: 2,
     title: "Cup Cake",
+    image:"src/assets/background-with-delicious-ice-cream-with-text-hello-summer.png",
     variant: [
       {
         name: "Rainbow",
@@ -38,6 +40,7 @@ export const menuList = [
   {
     id: 3,
     title: "Macarons",
+    image:"src/assets/background-with-delicious-ice-cream-with-text-hello-summer.png",
     variant: [
       {
         name: "Chocolate",

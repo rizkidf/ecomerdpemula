@@ -14,7 +14,12 @@ const MenuList = () => {
             className="w-full h-[80vh] flex flex-col items-center justify-center p-6"
             key={i}
           >
-            <div className="w-[200px] h-[200px] bg-slate-500 rounded-full"></div>
+            <div className="w-[200px] h-[200px] rounded-full">
+              <img
+                src={menu.image || ""}
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="text-center w-full flex flex-col justify-center items-center">
               <h1 className="text-6xl font-semibold my-5">{menu.title}</h1>
               <div className="gap-3 flex flex-col mt-3">

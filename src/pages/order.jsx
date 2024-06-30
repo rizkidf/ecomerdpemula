@@ -23,13 +23,20 @@ const Order = () => {
     setIsShowModalOrder(true);
   }
 
+  console.log(filteredMenu?.image);
+
   return (
-    <section className="flex justify-center h-[100vh] relative">
+    <section className="flex justify-center h-[100vh] relative bg-yellow-200">
       <div className="absolute top-2 left-2">
         <button onClick={() => navigate("/menu-list")}>Back</button>
       </div>
       <div className="container grid grid-cols-2 justify-center items-center">
-        <div className="w-[500px] h-[500px] bg-slate-500 rounded-full"></div>
+        <div className="w-[500px] h-[500px] bg-slate-500 rounded-full">
+          <img
+            src={filteredMenu?.image || ""}
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div>
           <h1 className="text-6xl font-semibold mb-16">
             {filteredMenu?.title}

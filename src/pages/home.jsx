@@ -19,7 +19,10 @@ const Home = () => {
           </button>
         </div>
         <div className="col-span-1 flex justify-center items-center">
-          <div className="w-[500px] h-[500px] bg-slate-500 rounded-lg"></div>
+          <div className="w-[500px] h-[500px] rounded-lg">
+            {/* src diganti ge ngisi gambar */}
+            <img src="src/assets/background-with-delicious-ice-cream-with-text-hello-summer.png" className="w-full" />
+          </div>
         </div>
       </div>
     </section>
