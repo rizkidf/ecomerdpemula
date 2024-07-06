@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import banner from "../assets/1.png";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Home = () => {
         <div className="col-span-1 flex justify-center items-center">
           <div className="w-[500px] h-[500px] rounded-lg">
             {/* src diganti ge ngisi gambar */}
-            <img src="src/assets/1.png" className="w-full" />
+            <img src={banner} className="w-full" />
           </div>
         </div>
       </div>

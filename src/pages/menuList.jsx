@@ -17,7 +17,7 @@ const MenuList = () => {
             <div className="w-[200px] h-[200px] rounded-full">
               <img
                 src={menu.image || ""}
-                className="w-full h-full object-cover"
+                className="w-[200px] h-[200px] object-cover rounded-full"
               />
             </div>
             <div className="text-center w-full flex flex-col justify-center items-center">

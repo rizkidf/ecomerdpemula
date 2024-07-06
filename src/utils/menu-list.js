@@ -1,8 +1,12 @@
+import iceCreamImg from "../assets/21.png";
+import cupCakeImg from "../assets/22.png";
+import macaronsImg from "../assets/23.png";
+
 export const menuList = [
   {
     id: 1,
     title: "Ice Cream",
-    image:"src/assets/21.png",
+    image: iceCreamImg,
     variant: [
       {
         name: "Strawbery",
@@ -21,7 +25,7 @@ export const menuList = [
   {
     id: 2,
     title: "Cup Cake",
-    image:"src/assets/22.png",
+    image: cupCakeImg,
     variant: [
       {
         name: "Rainbow",
@@ -40,7 +44,7 @@ export const menuList = [
   {
     id: 3,
     title: "Macarons",
-    image:"src/assets/23.png",
+    image: macaronsImg,
     variant: [
       {
         name: "Chocolate",

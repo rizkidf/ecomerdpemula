@@ -34,7 +34,7 @@ const Order = () => {
         <div className="w-[500px] h-[500px] bg-slate-500 rounded-full">
           <img
             src={filteredMenu?.image || ""}
-            className="w-full h-full object-cover"
+            className="w-[500px] h-[500px] object-cover rounded-full"
           />
         </div>
         <div>
