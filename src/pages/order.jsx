@@ -49,7 +49,7 @@ const Order = () => {
               <select
                 name="variant"
                 id="variant"
-                className="p-4 border rounded-xl border-black relative"
+                className="p-4 border rounded-xl border-black relative bg-white"
                 onChange={(e) => {
                   setSelectedVariantPrice({
                     name: e.target.selectedOptions[0].text,
@@ -70,7 +70,7 @@ const Order = () => {
               </label>
               <input
                 type="number"
-                className="p-4 border rounded-xl border-black"
+                className="p-4 border rounded-xl border-black bg-white"
                 onChange={(e) => setCount(e.target.value)}
               />
             </div>
